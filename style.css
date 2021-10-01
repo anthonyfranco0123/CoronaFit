@@ -1,0 +1,245 @@
+/* Master Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  }
+  
+  .body {
+    font-family: "Segoe UI";
+    background-image: url(https://cdn.glitch.com/6eda4a57-8890-49a3-9780-0f410f53029d%2FFront.png?v=1594471049300);
+    background-repeat: no-repeat;
+    background-position: 50% 29%;
+    
+    max-width: 100%;
+  }
+  
+  /*overflow-x: hidden;
+    overflow-y: auto;*/
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-wrapper {
+    
+    justify-content: space-between;
+    padding: 38px;
+  }
+  
+  
+  .nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  .nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+  }
+  
+  .active-nav-link {
+    border-bottom: 1px solid black;
+  }
+  
+  .active-nav-link a {
+    color: black !important;
+  }
+  
+  .nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+  }
+  
+  .nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+  }
+  
+  .nav-link-wrapper a:hover {
+    color: black;
+  }
+  
+  
+  /* Portfolio Styles*/
+  .portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .portfolio-item-wrapper {
+    position: relative;
+  }
+  
+  .portfolio-img-background {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .img-text-wrapper {
+    position: absolute;
+    top: 0;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  /* Media Queries: Tablet Landscape */
+  @media screen and (max-width: 1060px) {
+      .body{
+        width: 100%;
+    }  
+  .links{
+    width: 100%;
+    }
+  }
+  
+  /* Media Queries: Tabled Portrait */
+  @media screen and (max-width: 768px) {
+      .body{ 
+        width:100%; 
+    }
+    
+    .links{
+      width: 100%;
+    }
+  }
+  
+  
+  /* Slider Styles */
+  .slidecontainer {
+    width: 20%; /* Width of the outside container */
+    margin-top: 10px;
+    margin-left: var(--margin-left-width);
+    padding: 20px;
+    background-color: #ffffff;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #d3d3d3;
+  }
+  
+  /* The slider itself */
+  .slider {
+    display: none;
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    border-radius: 5px;
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+    transition: opacity 0.2s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #d3d3d3;
+    background: #ffffff;
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #d3d3d3;
+    background: #ffffff;
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-ms-fill-lower {
+    background-color: #9ee34f; 
+  }
+  
+  /*Progress Bar Styles*/
+  .progress-bar-container {
+    margin-left: var(--margin-left-width);
+  }
+  
+  .progress-bar {
+    width: 340px;
+    height: 24px;
+    background: #d3d3d3;
+    border-radius: 12px;
+  }
+  
+  .progress-bar::-webkit-progress-bar {
+    border-radius: 12px;
+    background: #d3d3d3;
+  }
+  
+  .progress-bar::-webkit-progress-value {
+    background: #ff8000;
+    border-radius: 12px;
+  }
+  
+  .links {
+    
+      background-color: rgb(14, 14, 14);
+      text-align: center;
+  }
+  
+  .links ul{
+      display: inline-flex;
+      list-style: none;
+      color: white;
+  }
+  
+  .links ul li{
+      width: 165px;
+      margin: 25px;
+      padding: 20px;
+  }
+  
+  .links ul li a{
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      padding: 5px 10px;
+      border: 1px solid rgb(255, 255, 255,0.5);
+      transition: 0.6s ease;
+      position: relative;
+      left: 200px;
+  }
+  
+  .links ul li a:hover{
+      background-color: rgb(233, 233, 233,0.8);
+      color: black;
+  }
+  
+  
+  .Jalan #2020{
+    float:left;
+    position: relative; 
+    left: 550x;
+  }
